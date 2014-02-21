@@ -1,6 +1,10 @@
 ;;;(load-file "./ox-html.el")  
 ;;;(load-file "./ox-rss.el")  
 ;;; orgblog-publisher nothing
+
+(add-to-list 'load-path "~/.emacs.d/site-lisp/org-jekyll-mode")
+(require 'org-jekyll-mode)
+
 (require 'org-publish)
 ;;;(require 'ox-rss)
 
@@ -11,9 +15,10 @@
          :base-directory "./posts/" ;; Change this to your local dir
          :base-extension "org"
          :publishing-directory "./output/"
-;;         :body-only t
+         :body-only t
          :recursive t
          :publishing-function org-publish-org-to-html
+;;         :publishing-function org-jekyll-export-to-html
 ;;         :link-home "index.html"
 ;;         :link-up "sitemap.html"
          :html-link-home "index.html"

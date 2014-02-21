@@ -1,6 +1,6 @@
 #+TITLE: 用org-mode写github博客
 #+AUTHOR: Holbrook(wanghaikuo@gmail.com)
-#+DATE: [2014-02-17]
+#+DATE: 2014-02-17
 #+YAML/LAYOUT: post
 #+YAML/CATEGORIES: test
 #+YAML/TAGS: emacs; org-mode; Jekyll
@@ -75,32 +75,34 @@ TODO状态
 
 其要点是：
 
-设置org-mode只导出html的body部分，并添加Jekyll元数据
+设置org-mode只导出html的body部分：
 
 | :body-only t
 
-
+并增加Jekyll元数据：
 
 | #+YAML/LAYOUT: post
 | #+YAML/CATEGORIES: test
 | #+YAML/TAGS: emacs; org-mode; Jekyll
 
+好用！包括自动添加日期，生成graphviz图片：
 
-
+M-x org-jekyll/publish-project
 
 * 使用org-mode的publish功能
 
-作为超级写作利器，org-mode自身就支持发布功能。比如xorg
-
-可以用org-mode的发布功能，生成整个blog的页面。这种方式的好处是不受Github Page的限制，可以发布在任何
+作为超级写作利器，org-mode自身就支持发布功能。比如xorg就是很好的例子。使用org-mode的发布功能，能够生成整个blog站点。这种方式的好处是不受Github Page的限制，可以发布在任何
 支持静态页面的地方，比如[[http://yuyang.farbox.com/org-mode-dropbox-blog.html][发布到Dropbox]]。
 
 但是要自己解决Jekyll支持的功能：
 
-rss
-archieves
-catelog
-。。。
+- archieves
+- catelog
+- tags list
+- rss
+- ……
+
+
 
 
 ** 一些工具
