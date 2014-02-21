@@ -1,0 +1,49 @@
+#+TITLE: 测试
+#+AUTHOR: Holbrook(wanghaikuo@gmail.com)
+#+DATE: [2014-02-14]
+#+YAML/LAYOUT: post
+#+YAML/CATEGORIES: test
+#+YAML/TAGS: emacs; org-mode
+#+OPTIONS: toc:t
+#+include: "../header.org"
+* 标题1
+abc
+** 标题2
+
+** sample equation in LATEX
+
+\begin{equation}
+\Delta =\sum_{i=1}^N w_i (x_i - \bar{x})^2 \frac{y_i}{x_i}
+\end{equation}
+
+** Figure
+
+Just Insert a link to your figure with C-c C-l like this:
+
+[[file:files/worg-unicorn2.png][file:files/worg-unicorn2.png]]
+Will generate a figure below:
+
+files/worg-unicorn2.png
+
+** Table
+
+writing table in Org-mode is also very simple, you must try it yourself. Code:
+
+#+ATTR_HTML: border="2" rules="all" frame="border"
+| column 1 | column 2 | column 3 |
+|        a |        b |        c |
+|      1.4 |      2.5 |      3.6 |
+|      1.4 |      2.5 |      3.6 |
+Table in html:
+
+
+** Source code
+
+I have inserted many source code into this page. It is very simple to do so in Org-mode. Just type "<" + "s" + <TAB> in a new line, Org-mode will automatically insert the folloing source code block for you:
+
+#+BEGIN_SRC <language name>
+<source code body>
+#+END_SRC
+We can use many other "<" + ? + <TAB> combinations to insert org-mode special struactral elements. It is called Easy Templates. This page gives a list of these templates.
+
+This [[link][http://orgmode.org/manual/Languages.html]] lists the supported languages. We have used latex, lisp and org so far.

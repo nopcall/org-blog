@@ -1,0 +1,39 @@
+#+TITLE: sitemap
+
+   + _posts
+     + methods
+       + emacs
+         + [[file:_posts/methods/emacs/telnet_ftp_ssh.org][TODO]]
+         + [[file:_posts/methods/emacs/who_killed.org][TextMate/PyCharm]]
+         + [[file:_posts/methods/emacs/tmp1.org][tmp1]]
+         + [[file:_posts/methods/emacs/w3m.org][w3m]]
+         + [[file:_posts/methods/emacs/wiki.org][以前一直都用Emacs Wiki Mode记笔记，但wiki mode总有些奇奇怪怪的bug，并且已经不更新了，最近org mode 非常火爆，禁不住想试一下。]]
+       + [[file:_posts/methods/orgmode4_scrum.org][Moving completed project trees to an archive file keeps the system compact and fast.]]
+       + [[file:_posts/methods/orgmode2_task.org][Org-mode,最强的任务管理利器，没有之一]]
+       + [[file:_posts/methods/blog-chart.org][blog-chart]]
+       + [[file:_posts/methods/emacs-ide.org][emacs-ide]]
+       + [[file:_posts/methods/emacs-org-mode-tags.org][emacs-org-mode-tags]]
+       + [[file:_posts/methods/emacs_gtd.org][emacs_gtd]]
+       + [[file:_posts/methods/emacs_chat.org][http://www.emacswiki.org/emacs/ELIM]]
+       + [[file:_posts/methods/org-contacts.org][org-contacts]]
+       + [[file:_posts/methods/orgmode1_editor.org][org-mode: 最好的文档编辑利器，没有之一]]
+       + [[file:_posts/methods/orgmode.org][orgmode]]
+       + [[file:_posts/methods/orgmode5_evernote.org][在Emacs中使用Evernote]]
+       + [[file:_posts/methods/emacs-pdf.org][在Emacs中使用Evernote]]
+       + [[file:_posts/methods/emacs-latex.org][最终极的文本标记语言解决方案是tex（包括latex），可以实现各种写作效果，包括数学公式，图表，引用，参考，编号等。latex还可以转化为info格式、html格式，docbook格式。]]
+       + [[file:_posts/methods/orgmode3_GTD.org][用Org-mode实现GTD]]
+       + [[file:_posts/methods/emacs-orgmode-blog.org][用org-mode写github博客]]
+     + [[file:_posts/sitemap.org][sitemap]]
+     + [[file:_posts/uml_with_plantuml.org][uml_with_plantuml]]
+     + [[file:_posts/test.org][测试]]
+   + web
+     + _drafts
+       + SOA
+         + ESB
+           + [[file:web/_drafts/SOA/ESB/esb_and_message.org][esb_and_message]]
+         + webservice
+           + [[file:web/_drafts/SOA/webservice/soap.org][[Java webservice 】]]
+         + [[file:web/_drafts/SOA/SOA_plan.org][SOA_plan]]
+         + [[file:web/_drafts/SOA/soa_style.org][soa_style]]
+         + [[file:web/_drafts/SOA/SOA_naming.org][祭奠SOA]]
+   + [[file:header.org][Main | Add here more links or any other stuff]]
