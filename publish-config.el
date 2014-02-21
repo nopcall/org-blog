@@ -1,5 +1,8 @@
+;;;(load-file "./ox-html.el")  
+;;;(load-file "./ox-rss.el")  
 ;;; orgblog-publisher nothing
 (require 'org-publish)
+;;;(require 'ox-rss)
 
 (setq org-publish-project-alist
       '(
@@ -27,6 +30,11 @@
          :email "wanghaikuo@gmail.com"
 ;;         :style    "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\"/>"
          :html-head  "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\"/>"
+         :html-head-extra
+         "<link rel=\"alternate\" type=\"application/rss+xml\"
+                href=\"http://mydomain.org/my-blog.xml\"
+                title=\"RSS feed for mydomain.org\">"
+
          :html-preamble "可以添加博客的头部"
          :html-postamble " 评论系统代码(disqus,多说等等)
       <p class=\"author\">Author: %a (%e)</p><p>Last Updated %d . Created by %c </p>"
@@ -36,6 +44,19 @@
 ;;         :table-of-contents t
 ;;         :style-include-default nil
          )
+
+
+
+
+       ;; (     "blog-rss"
+        ;;         :base-directory "./posts/"
+        ;;         :base-extension "org"
+        ;;       :publishing-directory "~/public_html/"
+        ;;     :publishing-function (org-rss-publish-to-rss)
+        ;;   :html-link-home "http://mydomain.org/"
+        ;; :html-link-use-abs-url t)
+        
+
 
         ;; These are static files (images, pdf, etc)
         ("post-static"
@@ -48,8 +69,8 @@
 
         ;; These are static files (images, pdf, etc)
         ("blog-static"
-         :base-directory "./_sites/" ;; Change this to your local dir
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|txt\\|asc"
+         :base-directory "./site/" ;; Change this to your local dir
+         :base-extension ".*"
          :publishing-directory "./output/"
 
          :recursive t
