@@ -76,11 +76,3 @@ abc
   Alice ->> Bob: asynchronous call
 #+end_src
 
-#+begin_src plantuml :file assets/images/test/gtd.png
-@startuml
-class Thing
-class Tag
-enum Status
-@enduml
-
-#+end_src

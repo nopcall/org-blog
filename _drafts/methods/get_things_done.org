@@ -5,10 +5,11 @@
 #+YAML/CATEGORIES: 方法工具
 #+YAML/TAGS: 效率
 #+OPTIONS: toc:t
+#+STARTUP: indent
 
 * 焦虑的来源
 
-现代人几乎都生活在焦虑之中。[[#][褪墨]]上面有一个[[http://www.mifengtd.cn/articles/emotion-mind-map.html][很典型的故事]]：
+现代人几乎都生活在焦虑之中。[[http://www.mifengtd.cn][褪墨]][1] 上面有一个[[http://www.mifengtd.cn/articles/emotion-mind-map.html][很典型的故事]]：
 
 #+BEGIN_QUOTE
   那天下午，我在放学的路上想起了下周即将到来的考试。上次考试我没有考好，我和老师都很失望，期待着这一次能走出阴影；然而我越是这么想就越心慌，想起了还有五套布置的模拟题没有完成。我的脚步变得沉重起来，希望能给朋友打个电话缓解一下压力。可是在这个新的集体里，我还没有找到非常过心的朋友，唯一的一个老朋友昨天刚刚搬到外地上学去了，以后不知能不能联系到。------不仅没有新的朋友，连老朋友也要失去！难道这就是我的新生活的样子吗？我叹了口气。
@@ -66,21 +67,24 @@
 
 * GTD简介
 
-GTD(Getting Things Done)是戴维·艾伦（David
-Allen）总结出的一套面向机构的“无压力工作”方法。
+GTD(Getting Things Done)是戴维·艾伦（David Allen）总结出的一套面向机构的“无压力工作”方法。
 
-喜欢读完整版的可以去下载中文版：[[http://www.mifengtd.cn/articles/getting_things_done_cn_download.html][《尽管去做------无压工作的艺术》]]，喜欢“一张图搞定”的可以看下面两张图：
+喜欢读完整版的可以去下载中文版：[[http://www.mifengtd.cn/articles/getting_things_done_cn_download.html][《尽管去做------无压工作的艺术》]]，
 
-[[/images/gtd/gtd_quickref.png]]
-[[http://www.mifengtd.cn/wp-content/uploads/37/3726/2007/11/o_gtd.JPG]]
+喜欢“一张图搞定”的可以看下面两张图：
 
-[[/images/gtd/gtd2_big.jpg][[[/images/gtd/gtd2.jpeg]]]]
+[[/assets/images/gtd/gtd_quickref.png]]
+
+[[/assets/images/gtd/gtd2_big.jpg]]
+
 
 如果你喜欢“抓住要点”，那么我就啰嗦一下GTD的要点：
 
 ** 一个流程
 
 收集 --> 分类 --> 计划 ---> 处理 --> 回顾
+
+
 
 1. 收集
 
@@ -133,6 +137,44 @@ Allen）总结出的一套面向机构的“无压力工作”方法。
 
 * 模型
 
+
+
+#+begin_src plantuml :file gtd.png
+@startuml
+class Thing
+class Tag
+enum Status
+@enduml
+#+end_src
+
+** 事件的状态
+
+#+begin_src plantuml :cmdline -charset UTF-8 :file gtd_state.png
+@startuml
+
+[*] --> 待整理
+待整理 --> 不需要行动
+待整理 --> 需要行动
+不需要行动 --> [*]
+需要行动 --> 完成
+完成 --> [*]
+需要行动 --> 待整理
+
+state 不需要行动 {
+  [*] --> 归档 : 有价值
+  [*] --> 废弃 : 无价值
+}
+
+state 需要行动 {
+  [*] --> 日程 : 有安排
+  [*] --> 待办 : 开始时间未定
+  待办 --> 待整理 : 回顾
+}
+
+@enduml
+#+end_src
+
+
 ** 重要程度与结构性拖延
 
 [[http://www.structuredprocrastination.com/index.php]]：去做一些无关紧要的事，以逃避更重要的事情
@@ -177,6 +219,10 @@ Any.do
 * 资源
 
 关于时间管理的博客：
-褪墨（http://www.mifengtd.cn）一个关于时间管理、个人提升和演讲技巧的博客。在帮助别人的同时，大家都在提高。
+
 
 GTDLife（http://www.gtdlife.cn）关注GTD应用，关注个人价值提升，和你一同成长，分享GTD经验。
+
+* Footnotes
+
+[1] [[http://www.mifengtd.cn][褪墨]]， 一个关于时间管理、个人提升和演讲技巧的博客。在帮助别人的同时，大家都在提高。
