@@ -12,10 +12,10 @@
       '(
         ;; These are the main web files
         ("org-notes"
-         :base-directory "./posts/" ;; Change this to your local dir
+         :base-directory "./src/" ;; Change this to your local dir
          :base-extension "org"
          :publishing-directory "./output/"
-         :body-only t
+;;         :body-only t
          :recursive t
          :publishing-function org-publish-org-to-html
 ;;         :publishing-function org-jekyll-export-to-html
@@ -65,7 +65,7 @@
 
         ;; These are static files (images, pdf, etc)
         ("post-static"
-         :base-directory "./posts/" ;; Change this to your local dir
+         :base-directory "./src/" ;; Change this to your local dir
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|txt\\|asc"
          :publishing-directory "./output/images/"
          :recursive t
